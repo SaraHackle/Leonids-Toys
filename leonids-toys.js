@@ -51,5 +51,6 @@ const blocks = {
 toys.push(blocks);
 
 for (const toy of toys) {
+    toy.price += toy.price * .05
   console.log(`The ${toy.name} made by ${toy.manufacturer} is $${toy.price}`);
 }
