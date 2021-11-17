@@ -1,3 +1,4 @@
+const toyToFind =3
 const toys = [
   {
     id: 1,
@@ -51,6 +52,8 @@ const blocks = {
 toys.push(blocks);
 
 for (const toy of toys) {
+    if (toy.id === toyToFind){
     toy.price += toy.price * .05
   console.log(`The ${toy.name} made by ${toy.manufacturer} is $${toy.price}`);
+    }
 }
