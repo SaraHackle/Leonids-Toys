@@ -1,4 +1,4 @@
-const toyToFind =3
+// const toyToFind =3
 const toys = [
   {
     id: 1,
@@ -51,9 +51,31 @@ const blocks = {
 };
 toys.push(blocks);
 
+const globe = {
+    name: "Magic Globe",
+    manufacturer: "Leap Frog",
+    price: 84,
+    color: "blue",
+    amtInInventory: 12,
+    inStock: true,
+  };
+
+const addToyToInventory = (toyObject) => {
+    const lastIndex = toys.length -1
+    const currentLastToy = toys[lastIndex]
+    const maxId = currentLastToy.id
+    const idForNewToy = maxId + 1
+
+    toyObject.id = idForNewToy
+    toys.push(toyObject)
+}
+
+addToyToInventory(globe)
+
 for (const toy of toys) {
-    if (toy.id === toyToFind){
+    // if (toy.id === toyToFind){
     toy.price += toy.price * .05
   console.log(`The ${toy.name} made by ${toy.manufacturer} is $${toy.price}`);
-    }
+    
 }
+console.log(toys)
